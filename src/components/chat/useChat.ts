@@ -2,9 +2,10 @@ import { useEffect, useRef, useState } from "react";
 import socketIOClient from "socket.io-client";
 import { MessageType } from "./types";
 import { Me } from "../../App";
+import { config } from "../../config";
 
 const NEW_CHAT_MESSAGE_EVENT = "MESSAGE"; // Name of the event
-const SOCKET_SERVER_URL = "http://localhost:4000";
+const SOCKET_SERVER_URL = config.apiUrl;
 
 type SendableMessage = {
   body: string;
